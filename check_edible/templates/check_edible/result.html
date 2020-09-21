@@ -1,0 +1,55 @@
+{% extends 'check_edible/base.html' %} 
+{% load static %} 
+{% block result %}
+
+<div class="contact bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>
+                    <p style="font-family: NanumBarunpenB">Analysis</p>
+                </h1>
+            </div>
+            <div class="col-md-12">
+                <div class="col-sm-3 text-center">
+                    type: 
+                    {% if pet_type == "cat" %}
+                    <img src="{% static 'images/pets/dog.svg' %}" width="150" height="150" />
+                    {% elif pet_type == "dog" %}
+                    <img src="{% static 'images/pets/cat.svg' %}" width="150" height="150" />
+                    {% endif %} 
+                </div>
+                <div class="col-sm-3 text-center">
+                    pred: {% if food_type == "almond" %}
+                    <img src="{% static 'images/foods/almond.svg' %}" width="150" height="150" />
+                    {% elif food_type == "apple" %}
+                    <img src="{% static 'images/foods/apple.svg' %}" width="150" height="150" />
+                    {% elif food_type == "broccoli" %}
+                    <img src="{% static 'images/foods/broccoli.svg' %}" width="150" height="150" />
+                    {% elif food_type == "carrot" %}
+                    <img src="{% static 'images/foods/carrot.svg' %}" width="150" height="150" />
+                    {% elif food_type == "grape" %}
+                    <img src="{% static 'images/foods/grape.svg' %}" width="150" height="150" />
+                    {% elif food_type == "mandarin" %}
+                    <img src="{% static 'images/foods/mandarin.svg' %}" width="150" height="150" />
+                    {% elif food_type == "melon" %}
+                    <img src="{% static 'images/foods/melon.svg' %}" width="150" height="150" />
+                    {% elif food_type == "onion" %}
+                    <img src="{% static 'images/foods/onion.svg' %}" width="150" height="150" />
+                    {% elif food_type == "welshOnion" %}
+                    <img src="{% static 'images/foods/welshOnion.svg' %}" width="150" height="150" />
+                    {% endif %} 
+                </div>
+                <div class="col-sm-3 text-center">
+                    edible: {% if is_edible %}
+                    <img src="{% static 'images/good.png' %}" width="150" height="150" />
+                    {% else %}
+                    <img src="{% static 'images/bad.png' %}" width="150" height="150" />
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
