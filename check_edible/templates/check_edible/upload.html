@@ -12,8 +12,21 @@
           </h2>
           <div class="grid clearfix">
             <form action="{% url 'check_edible:result' %}" method="post" enctype="multipart/form-data">
-              {% csrf_token %} {{ form.as_p }}
-              <br/>
+              {% csrf_token %}
+              {% comment %} {{ form.as_p }} {% endcomment %}
+              <label for="dog">
+                <input type="radio" name="dog" value="dog" checked>
+                <img src="{% static 'images/dog.png' %}">
+              </label>
+              <label name="cat">
+                <input type="radio" name="cat" value="cat">
+                <img src="{% static 'images/cat.png' %}">
+              </label>
+              <label for="food_image">
+                <input type="file" name="food_image" id="food_image" accept="image/*;capture=camera">
+                <img src="{% static 'images/camera.png' %}">
+              </label>
+
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
           </div>
