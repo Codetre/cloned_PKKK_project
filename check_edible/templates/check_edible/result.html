@@ -15,9 +15,9 @@
                     style="font-family: NanumBarunpenB; text-align: center; font-size:1.25em; padding-bottom: 15px;">
                     <p><b>Your pet</b></p>
                     {% if pet_type == "cat" %}
-                    <img src="{% static 'images/pets/dog.png' %}" width="150" height="150" />
-                    {% elif pet_type == "dog" %}
                     <img src="{% static 'images/pets/cat.png' %}" width="150" height="150" />
+                    {% elif pet_type == "dog" %}
+                    <img src="{% static 'images/pets/dog.png' %}" width="150" height="150" />
                     {% endif %}
                 </div>
                 <div class="col-sm-3 text-center"
