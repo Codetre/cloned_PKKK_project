@@ -5,8 +5,8 @@ from .forms import UploadForm
 import os
 import pandas as pd
 import tensorflow as tf
-from PIL import Image, ImageOps
 import numpy as np
+from PIL import Image
 
 # Create your views here.
 def index(request):
