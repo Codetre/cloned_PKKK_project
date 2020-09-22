@@ -5,8 +5,8 @@ from .forms import UploadForm
 import os
 import pandas as pd
 import tensorflow as tf
+from PIL import Image, ImageOps
 import numpy as np
-from PIL import Image
 
 # Create your views here.
 def index(request):
@@ -33,6 +33,16 @@ def upload(request):
 def result(request):
     # Edible data
     fruits = ['almond', 'apple', 'broccoli', 'carrot', 'grape', 'mandarin', 'melon', 'onion', 'welshOnion' ]
+    fruits_kor = {
+        'almond': '아몬드', 
+        'apple': '사과', 
+        'broccoli': '브로콜리', 
+        'carrot': '당근', 
+        'grape': '포도',
+        'mandarin': '귤', 
+        'melon': '참외', 
+        'onion': '양파',
+        'welshOnion': '대파' }
     cat = [False, True, False, True, True, False, True, True, False]
     dog = [False, True, False, True, True, False, True, True, False]
     edible_table = pd.DataFrame(index=fruits, columns = ['dog', 'cat'])
@@ -101,14 +111,15 @@ def result(request):
     is_edible = edible_table[pet_type][prediction]
     precaution = precaution_table[pet_type][prediction]
 
-    
+    kor_name = fruits_kor[prediction]
     # Gather variables for rendering and throw it
     context = {
         'pet_type': pet_type,
         'food_image': food_image,
         'food_type': prediction,
         'is_edible': is_edible,
-        'precaution': precaution
+        'precaution': precaution,
+        'kor_name': kor_name,
     }
     return render(request, "check_edible/result.html", context)
 

@@ -13,7 +13,8 @@
           <div class="grid clearfix">
             <form action="{% url 'check_edible:result' %}" method="post" enctype="multipart/form-data">
               {% csrf_token %} {{ form.as_p }}
-              <button type="submit">Submit</button>
+              <br/>
+              <button type="submit" class="btn btn-primary">Submit</button>
             </form>
           </div>
         </div>
