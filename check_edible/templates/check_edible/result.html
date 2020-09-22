@@ -12,7 +12,7 @@
             </div>
             <div class="col-md-12">
                 <div class="col-sm-3 text-center">
-                    type: 
+                    type:<br/>
                     {% if pet_type == "cat" %}
                     <img src="{% static 'images/pets/dog.svg' %}" width="150" height="150" />
                     {% elif pet_type == "dog" %}
@@ -20,7 +20,8 @@
                     {% endif %} 
                 </div>
                 <div class="col-sm-3 text-center">
-                    pred: {% if food_type == "almond" %}
+                    pred:<br/>
+                    {% if food_type == "almond" %}
                     <img src="{% static 'images/foods/almond.svg' %}" width="150" height="150" />
                     {% elif food_type == "apple" %}
                     <img src="{% static 'images/foods/apple.svg' %}" width="150" height="150" />
@@ -41,13 +42,16 @@
                     {% endif %} 
                 </div>
                 <div class="col-sm-3 text-center">
-                    edible: {% if is_edible %}
+                    edible:<br/>
+                    {% if is_edible %}
                     <img src="{% static 'images/good.png' %}" width="150" height="150" />
                     {% else %}
                     <img src="{% static 'images/bad.png' %}" width="150" height="150" />
                     {% endif %}
                 </div>
             </div>
+            
+            <p style="font-family: NanumBarunpenB; font-size:2vw;">{{ precaution }}</p>
         </div>
     </div>
 </div>

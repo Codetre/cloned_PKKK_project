@@ -17,6 +17,7 @@
 
   <!-- CSS
         ================================================== -->
+        
   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css" media="screen" />
   <link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}" type="text/css" media="screen" />
   <link rel="stylesheet" href="{% static 'css/layout.css' %}" type="text/css" media="screen" />
@@ -32,18 +33,36 @@
   <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}" />
   <link rel="stylesheet" href="{% static 'fonts/NanumBarunpenB/NanumBarunpenB.css' %}" />
   <link rel="stylesheet" href="{% static 'css/aos.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/tooptip.css' %}" />
 
   <!-- Favicons
         ================================================== -->
   <link rel="shortcut icon" href="{% static 'images/icon.ico' %}" />
-
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Popover -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+.radio-control {
+  font-size: 2em;
+}
+.image-control {
+  overflow: auto;
+}
+</style>
+
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section">
+
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f6466e3577e7c47"></script>
   <script type="text/javascript" src="{% static 'js/Search.js' %}" charset="utf-8"></script>
+
+
 
   <!-- Primary Page Layout
     ====================================================================== -->
@@ -58,13 +77,6 @@
               Providing the right way to eat and staying healthy with your pet
             </h1></p>
         </header>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 text-center">
-          <div class="down">
-            <a href="#about" class="smooth"><i class="fa fa-angle-down fa-3x"></i></a>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -88,6 +100,9 @@
       </div>
     </div>
   </div>
+
+
+
 
 
 
@@ -185,9 +200,18 @@
   <script src="{% static 'js/jquery.sticky.js' %}"></script>
   <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
   <script src="{% static 'js/main.js' %}"></script>
+  
+  
+  <!-- Popover script -->
+  <script>
+  $(function(){$('[data-toggle="popover"]').popover()})
+  $('button#').on('click', function(e) {e.preventDefault(); return true;});
+  </script>
+
 
   <!-- End Document
         ================================================== -->
+
 </body>
 
 </html>
