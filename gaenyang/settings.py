@@ -26,7 +26,7 @@ SECRET_KEY = 'p*vgp_sdb^ula$#jhv9c*a!xm-1908+g8voz+o&(pan%ey1d41'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.netlify.app']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 
 # Application definition
