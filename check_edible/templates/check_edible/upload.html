@@ -4,16 +4,19 @@
 {% block uploadform %}
 <div class="features">
   <div class="container">
-    <div class="row">
-      <h2 style="font-family: NanumBarunpenB">
+    <div class="text-center">
+      <h2 style="font-family: NanumBarunpenB;">
         Today, What kind of snack would you like to give your pet?
       </h2>
 
-      <form action="{% url 'check_edible:result' %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {% comment %} {{ form.as_p }} {% endcomment %}
-        <div class="features-content">
-          <div class="col-sm-3 text-center">
+
+      <div class="col-xs-12 text-center">
+        <form action="{% url 'check_edible:result' %}" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          {% comment %} {{ form.as_p }} {% endcomment %}
+
+          <div class="about-content">
+          <p>반려동물의 종류를 선택하세요</p>
             <label for="dog">
               <input type="radio" name="pet_type" value="dog" width="150" height="150">
               <img src="{% static 'images/pets/dog.png' %}">
@@ -23,21 +26,24 @@
               <img src="{% static 'images/pets/cat.png' %}">
             </label>
           </div>
-        </div>
 
-        <div class="features-content">
-          <label for="food_image">
-            <input type="file" name="food_image" id="food_image" accept="image/*;capture=camera">
-            <img src="{% static 'images/camera.png' %}" width="150" height="150">
-          </label>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </form>
+          <div class="about-content">
+            <p>식재료를 올려주세요</p>
+            <label for="food_image" >
+              <input type="file" name="food_image" id="food_image" accept="image/*;capture=camera" style="border: none; display: none;">
+              <img src="{% static 'images/camera.png'%}" width="150" height="102"/>
+            </label>
 
+
+          <div class="about-content">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
-</div>
+
 
 <!-- Search position -->
 <div class="subscribe" id="subscribe">
