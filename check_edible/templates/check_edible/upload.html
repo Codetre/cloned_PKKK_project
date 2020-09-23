@@ -16,12 +16,14 @@
           {% comment %} {{ form.as_p }} {% endcomment %}
 
           <div class="about-content">
-          <p style="font-family: NanumBarunpenB">반려동물의 종류를 선택하세요</p>
-            <label for="dog">
+            <p style="font-family: NanumBarunpenB">반려동물의 종류를 선택하세요</p>
+
+            <label name="dog" class="btn btn-lg ">
               <input type="radio" name="pet_type" value="dog" width="150" height="150">
               <img src="{% static 'images/pets/dog.png' %}">
             </label>
-            <label name="cat">
+
+            <label  name="cat" class="btn btn-lg ">
               <input type="radio" name="pet_type" value="cat" width="150" height="150">
               <img src="{% static 'images/pets/cat.png' %}">
             </label>
@@ -29,15 +31,16 @@
 
           <div class="about-content">
             <p style="font-family: NanumBarunpenB">식재료를 올려주세요</p>
-            <label for="food_image" >
-              <input type="file" name="food_image" id="food_image" accept="image/*;capture=camera" style="border: none; display: none;">
-              <img src="{% static 'images/camera.png'%}" width="150" height="102"/>
+            <label for="food_image">
+              <input type="file" name="food_image" id="food_image" accept="image/*;capture=camera"
+                style="border: none; display: none;">
+              <img src="{% static 'images/camera.png'%}" width="150" height="102" />
             </label>
 
 
-          <div class="about-content">
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
+            <div class="about-content">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
         </form>
       </div>
     </div>
@@ -55,8 +58,8 @@
 
           <form action="search" class="search" method="get" target="_blank">
             <select class="SelectSearch" name="engine">
-              <option id="google" value="google">Google</option>
-              <option id="naver" value="naver">Naver</option>
+              <option id="google" value="google" style="background-color: #D6D6D6;">Google</option>
+              <option id="naver" value="naver" style="background-color: #D6D6D6;">Naver</option>
             </select>
 
             <input id="search" class="keyword" type="text" name="keyword" maxlength="255" value="{{ search_string }}"
