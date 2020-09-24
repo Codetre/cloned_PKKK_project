@@ -10,9 +10,9 @@
                     <p style="font-family: NanumBarunpenB; padding-bottom: 1.25em">Analysis</p>
                 </h1>
             </div>
-            <div class="col-md-12">
-                <div class="col-sm-3 text-center"
-                    style="font-family: NanumBarunpenB; text-align: center; font-size:1.25em; padding-bottom: 15px;">
+            <div class="col-md-12" style="text-align: center; ">
+                <div
+                    style="display:inline-block; vertical-align:middle; font-family: NanumBarunpenB; text-align: center; font-size:1.25em; padding-bottom: 15px;">
                     <p><b>Your pet</b></p>
                     {% if pet_type == "cat" %}
                     <img src="{% static 'images/pets/cat.png' %}" width="150" height="150" />
@@ -20,8 +20,8 @@
                     <img src="{% static 'images/pets/dog.png' %}" width="150" height="150" />
                     {% endif %}
                 </div>
-                <div class="col-sm-3 text-center"
-                    style="font-family: NanumBarunpenB; text-align: center; font-size:1.25em; padding-bottom: 15px;">
+                <div
+                    style="display:inline-block; vertical-align:middle; font-family: NanumBarunpenB; text-align: center; font-size:1.25em; padding-bottom: 15px;">
                     <p><b>Food: {{ kor_name }}</b></p>
                     {% if food_type == "almond" %}
                     <img src="{% static 'images/foods/almond.png' %}" width="150" height="150" />
@@ -43,8 +43,8 @@
                     <img src="{% static 'images/foods/welshOnion.png' %}" width="150" height="150" />
                     {% endif %}
                 </div>
-                <div class="col-sm-3 text-center"
-                    style="font-family: NanumBarunpenB; text-align: center; font-size:1.25em; padding-bottom: 15px;">
+                <div
+                    style="display:inline-block; vertical-align:middle; font-family: NanumBarunpenB; text-align: center; font-size:1.25em; padding-bottom: 15px;">
                     <p><b>Is it edible?</b></p>
                     {% if is_edible %}
                     <img src="{% static 'images/true.png' %}" width="150" height="150" />
@@ -54,10 +54,10 @@
                 </div>
             </div>
 
-            
+
         </div>
         <div style="font-family: NanumBarunpenB; font-size:1.5em; text-align: center; padding-top: 10px;">
-                <strong>{{ precaution }}</strong></div>
+            <strong>{{ precaution }}</strong></div>
     </div>
 </div>
 
